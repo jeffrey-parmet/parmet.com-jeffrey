@@ -2,23 +2,24 @@
 layout: default
 body_class: home
 ---
+{%- include root.html -%}
     <section class="intro">
       <div>
         <h1>Hi, I'm Jeffrey.</h1>
         <p>I do technical things in movement politics, mostly engineering.</p>
         <p>When I'm not on my computer I'm probably cooking, doing yoga, or reading! I've also been known to play tennis or boulder a bit.</p>
       </div>
-      <img class="portrait" src="{{ '/img/me.jpeg' | relative_url }}" alt="Photo of me">
+      <img class="portrait" src="{{ root }}img/me.jpeg" alt="Photo of me">
     </section>
 
     <section>
       <div class="section-head">
         <h2>Recent writing</h2>
-        <a class="more" href="{{ '/writing/' | relative_url }}">All writing →</a>
+        <a class="more" href="{{ root }}writing/">All writing →</a>
       </div>
       <ul class="posts">
         {% for post in site.posts limit: 3 %}
-        <li><a href="{{ post.url | relative_url }}"><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %-d, %Y' }}</time> <span>{{ post.title }}</span></a></li>
+        <li><a href="{{ root }}{{ post.url | remove_first: '/' }}"><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %-d, %Y' }}</time> <span>{{ post.title }}</span></a></li>
         {% endfor %}
       </ul>
     </section>

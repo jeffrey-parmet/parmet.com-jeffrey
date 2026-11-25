@@ -1,3 +1,4 @@
+{%- include root.html -%}
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,18 +9,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&family=Lilita+One&family=Playfair:ital,opsz,wght@0,5..1200,400..600;1,5..1200,400&display=swap">
-  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
-  <link rel="icon" href="{{ '/img/icon-32.jpg' | relative_url }}" sizes="32x32">
-  <link rel="apple-touch-icon" href="{{ '/img/icon-180.jpg' | relative_url }}">
+  <link rel="stylesheet" href="{{ root }}style.css">
+  <link rel="icon" href="{{ root }}img/icon-32.jpg" sizes="32x32">
+  <link rel="apple-touch-icon" href="{{ root }}img/icon-180.jpg">
 </head>
 <body class="{{ page.body_class }}">
 <div class="layout">
   <aside class="sidebar">
-    <a class="badge" href="{{ '/' | relative_url }}"><img src="{{ '/img/icon-512.png' | relative_url }}" alt="Home"></a>
-    <a class="name" href="{{ '/' | relative_url }}"><span>Jeffrey</span><span>Parmet</span></a>
+    <a class="badge" href="{{ root }}"><img src="{{ root }}img/icon-512.png" alt="Home"></a>
+    <a class="name" href="{{ root }}"><span>Jeffrey</span><span>Parmet</span></a>
     <nav>
-      <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
-      <a href="{{ '/writing/' | relative_url }}"{% if page.url == '/writing/' %} aria-current="page"{% elsif page.layout == 'post' %} aria-current="true"{% endif %}>Writing</a>
+      <a href="{{ root }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
+      <a href="{{ root }}writing/"{% if page.url == '/writing/' %} aria-current="page"{% elsif page.layout == 'post' %} aria-current="true"{% endif %}>Writing</a>
     </nav>
     <div class="sidebar-foot"><a href="https://github.com/jeffrey-parmet">GitHub</a> · © 2026</div>
   </aside>

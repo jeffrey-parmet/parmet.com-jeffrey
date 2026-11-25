@@ -1,0 +1,4 @@
+{%- comment -%} Sets `root` to the relative path back to the site root, so links work at github.io and behind the parmet.com/jeffrey proxy. {%- endcomment -%}
+{%- assign depth = page.url | append: "x" | split: "/" | size | minus: 2 -%}
+{%- capture root -%}{%- for i in (1..depth) -%}../{%- endfor -%}{%- endcapture -%}
+{%- if root == "" -%}{%- assign root = "./" -%}{%- endif -%}

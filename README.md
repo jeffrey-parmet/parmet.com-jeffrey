@@ -22,7 +22,7 @@ Push. It appears at `/writing/slug.html`, on the Writing page, and in "Recent wr
 docker run --rm -p 4000:4000 -v "$PWD":/srv/jekyll jekyll/jekyll:4 jekyll serve
 ```
 
-Then open http://localhost:4000/parmet.com-jeffrey/.
+Then open http://localhost:4000/. Links are relative (see `_includes/root.html`), so the site also works behind the parmet.com/jeffrey proxy — don't switch them to `relative_url`.
 
 ## Layout
 
