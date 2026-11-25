@@ -94,7 +94,8 @@ h1 { margin: 0 0 12px; font-size: 56px; color: var(--teal); text-shadow: 4px 3px
 }
 .intro { display: flex; flex-wrap: wrap; align-items: center; gap: 40px; }
 .intro > div { flex: 999 1 360px; min-width: 0; }
-.intro p { margin: 0; max-width: 32em; }
+.intro p { margin: 0; }
+.intro p + p { margin-top: 0.6em; }
 .portrait {
   flex: 0 0 auto;
   width: 180px;
