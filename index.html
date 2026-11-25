@@ -4,31 +4,45 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jeffrey Parmet</title>
-  <meta name="description" content="TODO: one-line description">
+  <meta name="description" content="Writing by Jeffrey Parmet.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&family=Lilita+One&family=Playfair:ital,opsz,wght@0,5..1200,400..600;1,5..1200,400&display=swap">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="img/icon-32.jpg" sizes="32x32">
   <link rel="apple-touch-icon" href="img/icon-180.jpg">
 </head>
-<body>
-  <header>
+<body class="home">
+<div class="layout">
+  <aside class="sidebar">
+    <a class="badge" href="./"><img src="img/icon-512.png" alt="Home"></a>
+    <a class="name" href="./"><span>Jeffrey</span><span>Parmet</span></a>
     <nav>
-      <a href="./">Jeffrey Parmet</a>
+      <a href="./" aria-current="page">Home</a>
       <a href="writing/">Writing</a>
     </nav>
-  </header>
+    <div class="sidebar-foot"><a href="https://github.com/jeffrey-parmet">GitHub</a> · © 2026</div>
+  </aside>
 
   <main>
-    <img class="portrait" src="img/me.svg" alt="Photo of Jeffrey Parmet">
-    <h1>Hi, I'm Jeffrey.</h1>
-    <p>TODO: bio. A few sentences about who you are and what you work on.</p>
-    <p>TODO: links. <a href="mailto:TODO">Email</a> · <a href="#">GitHub</a></p>
+    <section class="intro">
+      <div>
+        <h1>Hi, I'm Jeffrey.</h1>
+        <p>TODO: bio. A few sentences about who you are, what you work on, and what you write about here.</p>
+      </div>
+      <img class="portrait" src="img/me.jpeg" alt="Photo of Jeffrey Parmet">
+    </section>
 
-    <h2>Recent writing</h2>
-    <ul class="posts">
-      <li><time datetime="2026-11-25">Nov 25, 2026</time> <a href="writing/hello-world.html">Hello, world</a></li>
-    </ul>
+    <section>
+      <div class="section-head">
+        <h2>Recent writing</h2>
+        <a class="more" href="writing/">All writing →</a>
+      </div>
+      <ul class="posts">
+        <li><a href="writing/hello-world.html"><time datetime="2026-11-25">Nov 25, 2026</time> <span>Hello, world</span></a></li>
+      </ul>
+    </section>
   </main>
-
-  <footer>© 2026 Jeffrey Parmet</footer>
+</div>
 </body>
 </html>
