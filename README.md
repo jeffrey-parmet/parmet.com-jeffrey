@@ -1,6 +1,6 @@
 # parmet.com-jeffrey
 
-Jekyll site built by GitHub Pages. Live at https://jeffrey-parmet.github.io/parmet.com-jeffrey/ — every push to `main` rebuilds and republishes.
+Jekyll site built by GitHub Pages. Live at parmet.com/jeffrey
 
 ## Add a post
 
@@ -14,7 +14,7 @@ title: Post title
 Body in Markdown.
 ```
 
-Push. It appears at `/writing/slug.html`, on the Writing page, and in "Recent writing" on the homepage (newest three).
+Push.
 
 ## Preview locally
 
@@ -22,15 +22,4 @@ Push. It appears at `/writing/slug.html`, on the Writing page, and in "Recent wr
 docker run --rm -p 4000:4000 -v "$PWD":/srv/jekyll jekyll/jekyll:4 jekyll serve
 ```
 
-Then open http://localhost:4000/. Links are relative (see `_includes/root.html`), so the site also works behind the parmet.com/jeffrey proxy — don't switch them to `relative_url`.
-
-## Layout
-
-- `_layouts/default.html`: sidebar and page shell, shared by every page.
-- `_layouts/post.html`: post title and date.
-- `style.css`: all styling.
-
-## Images
-
-- Photo: `img/me.jpeg`, shown as a circle on the homepage.
-- Icons: `img/icon-<size>`. The favicon is `icon-32.jpg`; drop in a replacement with the same name.
+Then open http://localhost:4000/.
