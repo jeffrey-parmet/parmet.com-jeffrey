@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Writing
+title: Chicken Scratch
 ---
 {%- include root.html -%}
-    <h1>Writing</h1>
+    <h1>Chicken Scratch</h1>
     <ul class="posts">
       {% for post in site.posts %}
       <li><a href="{{ root }}{{ post.url | remove_first: '/' }}"><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %-d, %Y' }}</time> <span>{{ post.title }}</span></a></li>
