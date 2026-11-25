@@ -1,48 +1,24 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jeffrey Parmet</title>
-  <meta name="description" content="Writing by Jeffrey Parmet.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&family=Lilita+One&family=Playfair:ital,opsz,wght@0,5..1200,400..600;1,5..1200,400&display=swap">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="img/icon-32.jpg" sizes="32x32">
-  <link rel="apple-touch-icon" href="img/icon-180.jpg">
-</head>
-<body class="home">
-<div class="layout">
-  <aside class="sidebar">
-    <a class="badge" href="./"><img src="img/icon-512.png" alt="Home"></a>
-    <a class="name" href="./"><span>Jeffrey</span><span>Parmet</span></a>
-    <nav>
-      <a href="./" aria-current="page">Home</a>
-      <a href="writing/">Writing</a>
-    </nav>
-    <div class="sidebar-foot"><a href="https://github.com/jeffrey-parmet">GitHub</a> · © 2026</div>
-  </aside>
-
-  <main>
+---
+layout: default
+body_class: home
+---
     <section class="intro">
       <div>
         <h1>Hi, I'm Jeffrey.</h1>
-        <p>TODO: bio. A few sentences about who you are, what you work on, and what you write about here.</p>
+        <p>I do technical things in movement politics, mostly engineering.</p>
+        <p>When I'm not on my computer I'm probably cooking, doing yoga, or reading! I've also been known to play tennis or boulder a bit.</p>
       </div>
-      <img class="portrait" src="img/me.jpeg" alt="Photo of Jeffrey Parmet">
+      <img class="portrait" src="{{ '/img/me.jpeg' | relative_url }}" alt="Photo of me">
     </section>
 
     <section>
       <div class="section-head">
         <h2>Recent writing</h2>
-        <a class="more" href="writing/">All writing →</a>
+        <a class="more" href="{{ '/writing/' | relative_url }}">All writing →</a>
       </div>
       <ul class="posts">
-        <li><a href="writing/hello-world.html"><time datetime="2026-11-25">Nov 25, 2026</time> <span>Hello, world</span></a></li>
+        {% for post in site.posts limit: 3 %}
+        <li><a href="{{ post.url | relative_url }}"><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %-d, %Y' }}</time> <span>{{ post.title }}</span></a></li>
+        {% endfor %}
       </ul>
     </section>
-  </main>
-</div>
-</body>
-</html>

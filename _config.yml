@@ -1,0 +1,10 @@
+title: Jeffrey Parmet
+baseurl: /parmet.com-jeffrey
+permalink: /writing/:title.html
+defaults:
+  - scope:
+      type: posts
+    values:
+      layout: post
+exclude:
+  - README.md

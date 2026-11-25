@@ -1,20 +1,34 @@
 # parmet.com-jeffrey
 
-Plain HTML + one CSS file. No build step. Live at https://jeffrey-parmet.github.io/parmet.com-jeffrey/ — every push to `main` republishes via GitHub Pages.
-
-## Preview
-
-```sh
-python3 -m http.server 8000
-```
-
-Then open http://localhost:8000.
+Jekyll site built by GitHub Pages. Live at https://jeffrey-parmet.github.io/parmet.com-jeffrey/ — every push to `main` rebuilds and republishes.
 
 ## Add a post
 
-1. Copy `writing/_template.html` to `writing/<slug>.html` and fill in the title, date, and body.
-2. Add a `<li>` to the top of the list in `writing/index.html`.
-3. Add it to "Recent writing" on `index.html` (keep three or fewer so the homepage fits one screen).
+Create `writing/_posts/YYYY-MM-DD-slug.md`:
+
+```markdown
+---
+title: Post title
+---
+
+Body in Markdown.
+```
+
+Push. It appears at `/writing/slug.html`, on the Writing page, and in "Recent writing" on the homepage (newest three).
+
+## Preview locally
+
+```sh
+docker run --rm -p 4000:4000 -v "$PWD":/srv/jekyll jekyll/jekyll:4 jekyll serve
+```
+
+Then open http://localhost:4000/parmet.com-jeffrey/.
+
+## Layout
+
+- `_layouts/default.html`: sidebar and page shell, shared by every page.
+- `_layouts/post.html`: post title and date.
+- `style.css`: all styling.
 
 ## Images
 
