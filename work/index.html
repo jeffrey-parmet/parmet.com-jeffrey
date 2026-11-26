@@ -1,0 +1,15 @@
+---
+layout: default
+title: Work
+---
+{%- include root.html -%}
+    <h1>Work</h1>
+    <ul class="cases">
+      {% for case in site.work %}
+      <li>
+        <a class="thumb" href="{{ case.link }}" tabindex="-1" aria-hidden="true">{% if case.image %}<img src="{{ root }}img/work/{{ case.image }}" alt="">{% endif %}</a>
+        <h2><a href="{{ case.link }}">{{ case.title }}</a></h2>
+        {{ case.content | markdownify }}
+      </li>
+      {% endfor %}
+    </ul>

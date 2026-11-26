@@ -19,7 +19,20 @@ Push.
 ## Preview locally
 
 ```sh
-docker run --rm -p 4000:4000 -v "$PWD":/srv/jekyll jekyll/jekyll:4 jekyll serve
+docker run --rm -p 4000:4000 -v "$PWD":/srv/jekyll jekyll/jekyll:4 jekyll serve --host 0.0.0.0
 ```
 
 Then open http://localhost:4000/.
+## Add a work case
+
+Put the thumbnail in `img/work/`, then create `_work/NN-slug.md` (cards sort by filename):
+
+```markdown
+---
+title: Case title
+image: thumb.jpg
+link: https://github.com/you/repo
+---
+
+Short text under the thumbnail.
+```

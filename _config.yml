@@ -7,3 +7,5 @@ defaults:
       layout: post
 exclude:
   - README.md
+collections:
+  work: {}
