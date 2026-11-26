@@ -23,6 +23,7 @@ docker run --rm -p 4000:4000 -v "$PWD":/srv/jekyll jekyll/jekyll:4 jekyll serve 
 ```
 
 Then open http://localhost:4000/.
+
 ## Add a work case
 
 Put the thumbnail in `img/projects/`, then create `_projects/NN-slug.md`. Cards sort by filename:
