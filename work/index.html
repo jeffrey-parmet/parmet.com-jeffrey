@@ -5,9 +5,9 @@ title: Work
 {%- include root.html -%}
     <h1>Work</h1>
     <ul class="cases">
-      {% for case in site.work %}
+      {% for case in site.projects %}
       <li>
-        <a class="thumb" href="{{ case.link }}" tabindex="-1" aria-hidden="true">{% if case.image %}<img src="{{ root }}img/work/{{ case.image }}" alt="">{% endif %}</a>
+        <a class="thumb" href="{{ case.link }}" tabindex="-1" aria-hidden="true">{% if case.image %}<img src="{{ root }}img/projects/{{ case.image }}" alt="">{% endif %}</a>
         <h2><a href="{{ case.link }}">{{ case.title }}</a></h2>
         {{ case.content | markdownify }}
       </li>

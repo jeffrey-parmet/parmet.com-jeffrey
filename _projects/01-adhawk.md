@@ -1,6 +1,6 @@
 ---
 title: AdHawk
-image: ../img/AdHawk.png
+image: AdHawk.png
 link: https://priorities.org/adhawk/
 ---
 

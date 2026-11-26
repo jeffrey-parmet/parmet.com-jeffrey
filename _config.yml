@@ -8,4 +8,4 @@ defaults:
 exclude:
   - README.md
 collections:
-  work: {}
+  projects: {}

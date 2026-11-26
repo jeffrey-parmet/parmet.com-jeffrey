@@ -125,9 +125,10 @@ blockquote { margin: 1.5em 0; padding: 0 0 0 1em; font-style: italic; color: var
 /* Work */
 .cases { list-style: none; margin: 32px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 48px 40px; }
 @media (min-width: 1200px) { .cases { grid-template-columns: repeat(3, 1fr); } }
-.thumb { display: block; aspect-ratio: 4 / 3; overflow: hidden; border: 3px solid var(--ink); border-radius: 14px; background: var(--mustard); }
+.thumb { display: block; aspect-ratio: 4 / 3; overflow: hidden; border: 3px solid var(--ink); border-radius: 14px; background: #fff; }
 .thumb img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .cases h2 { margin: 18px 0 6px; font-size: 30px; }
 .cases h2 a { color: var(--magenta); text-decoration: none; }
 .cases h2 a:hover { color: var(--plum); }
 .cases p { margin: 0; }
+.cases p + p { margin-top: 0.6em; }

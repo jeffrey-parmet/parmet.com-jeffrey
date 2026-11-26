@@ -4,7 +4,7 @@ Jekyll site built by GitHub Pages. Live at parmet.com/jeffrey
 
 ## Add a post
 
-Create `writing/_posts/YYYY-MM-DD-slug.md`:
+Create `_posts/YYYY-MM-DD-slug.md`:
 
 ```markdown
 ---
@@ -25,7 +25,7 @@ docker run --rm -p 4000:4000 -v "$PWD":/srv/jekyll jekyll/jekyll:4 jekyll serve 
 Then open http://localhost:4000/.
 ## Add a work case
 
-Put the thumbnail in `img/work/`, then create `_work/NN-slug.md` (cards sort by filename):
+Put the thumbnail in `img/projects/`, then create `_projects/NN-slug.md`. Cards sort by filename:
 
 ```markdown
 ---
