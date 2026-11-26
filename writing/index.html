@@ -4,6 +4,7 @@ title: Chicken Scratch
 ---
 {%- include root.html -%}
     <h1>Chicken Scratch</h1>
+    <p>I don't promise to write weekly, but I'll try.</p>
     <ul class="posts">
       {% for post in site.posts %}
       <li><a href="{{ root }}{{ post.url | remove_first: '/' }}"><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %-d, %Y' }}</time> <span>{{ post.title }}</span></a></li>
