@@ -1,5 +1,6 @@
 """Create a Buttondown draft (email_summary + link) for one post file."""
 
+import html
 import json
 import os
 import re
@@ -25,7 +26,11 @@ slug = re.sub(r"^\d{4}-\d{2}-\d{2}-", "", path.stem)
 url = f"https://parmet.com/jeffrey/writing/{slug}.html?ref=email-{slug}"
 email = {
     "subject": title,
-    "body": f"{summary}\n\n[Read the full post]({url})",
+    "body": "".join(
+        f"<p>{html.escape(p).replace(chr(10), '<br>')}</p>"
+        for p in summary.split("\n\n")
+    )
+    + f'<p><a href="{url}">Read the full post</a></p>',
     "status": "draft",
 }
 if os.environ.get("DRY_RUN"):
