@@ -9,3 +9,4 @@ title: Chicken Scratch
       <li><a href="{{ root }}{{ post.url | remove_first: '/' }}"><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %-d, %Y' }}</time> <span>{{ post.title }}</span></a></li>
       {% endfor %}
     </ul>
+    {% include subscribe.html %}

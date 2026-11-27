@@ -9,12 +9,13 @@ Create `_posts/YYYY-MM-DD-slug.md`:
 ```markdown
 ---
 title: Post title
+email_summary: A sentence or two for subscribers.
 ---
 
 Body in Markdown.
 ```
 
-Push.
+Push to `main`. If the new post has an `email_summary`, a GitHub Action creates a Buttondown draft (summary + link to the post); review and send it from Buttondown.
 
 ## Preview locally
 

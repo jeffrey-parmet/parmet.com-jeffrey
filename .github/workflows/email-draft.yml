@@ -1,0 +1,33 @@
+name: Email draft for new posts
+
+on:
+  push:
+    branches: [main]
+    paths: ["_posts/**"]
+
+permissions:
+  contents: read
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Create Buttondown drafts for added posts
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+          BEFORE: ${{ github.event.before }}
+        run: |
+          if ! git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+            echo "No previous commit to compare against; skipping."
+            exit 0
+          fi
+          git diff --name-only --diff-filter=A "$BEFORE" HEAD -- '_posts/*.md' | while read -r f; do
+            python .github/scripts/email_draft.py "$f"
+          done

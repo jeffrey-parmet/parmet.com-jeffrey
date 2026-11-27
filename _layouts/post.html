@@ -6,4 +6,5 @@ layout: default
   <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%b %-d, %Y' }}</time>
 
 {{ content | replace: '<a href="http', '<a target="_blank" rel="noopener" href="http' }}
+{% include subscribe.html %}
 </article>

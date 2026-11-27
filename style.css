@@ -132,3 +132,12 @@ blockquote { margin: 1.5em 0; padding: 0 0 0 1em; font-style: italic; color: var
 .cases h2 a:hover { color: var(--plum); }
 .cases p { margin: 0; }
 .cases p + p { margin-top: 0.6em; }
+
+/* Subscribe */
+.subscribe { max-width: 38em; margin-top: 48px; padding: 24px; border: 3px solid var(--ink); border-radius: 14px; background: var(--paper); }
+.subscribe label { display: block; margin-bottom: 12px; font-family: var(--display); font-size: 26px; line-height: 1.1; color: var(--magenta); }
+.subscribe div { display: flex; flex-wrap: wrap; gap: 12px; }
+.subscribe input { flex: 1 1 220px; min-width: 0; padding: 10px 14px; font: inherit; color: var(--ink); background: #fff; border: 2px solid var(--ink); border-radius: 10px; }
+.subscribe button { padding: 10px 22px; font-family: var(--label); font-size: 15px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--paper); background: var(--teal); border: 0; border-radius: 10px; cursor: pointer; }
+.subscribe button:hover { background: var(--ink); }
+.subscribe input:focus-visible, .subscribe button:focus-visible { outline: 3px solid var(--mustard); outline-offset: 2px; }
