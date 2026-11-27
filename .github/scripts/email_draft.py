@@ -22,7 +22,7 @@ if not summary:
     sys.exit()
 
 slug = re.sub(r"^\d{4}-\d{2}-\d{2}-", "", path.stem)
-url = f"https://parmet.com/jeffrey/writing/{slug}.html"
+url = f"https://parmet.com/jeffrey/writing/{slug}.html?ref=email-{slug}"
 email = {
     "subject": title,
     "body": f"{summary}\n\n[Read the full post]({url})",
