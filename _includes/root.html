@@ -2,3 +2,4 @@
 {%- assign depth = page.url | append: "x" | split: "/" | size | minus: 2 -%}
 {%- capture root -%}{%- for i in (1..depth) -%}../{%- endfor -%}{%- endcapture -%}
 {%- if root == "" -%}{%- assign root = "./" -%}{%- endif -%}
+{%- if page.root -%}{%- assign root = page.root -%}{%- endif -%}

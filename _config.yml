@@ -1,4 +1,5 @@
 title: Jeffrey Parmet
+description: I do things in movement/progressive tech, I also write sometimes.
 permalink: /writing/:title.html
 defaults:
   - scope:

@@ -5,7 +5,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
-  <meta name="description" content="Writing by Jeffrey Parmet.">
+  {%- assign desc = page.email_summary | default: page.description | default: page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 200 | escape %}
+  <meta name="description" content="{{ desc }}">
+  <meta name="theme-color" content="#0e3f50">
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
+  <meta property="og:description" content="{{ desc }}">
+  <meta property="og:url" content="https://parmet.com/jeffrey{{ page.url }}">
+  <meta property="og:image" content="https://parmet.com/jeffrey/img/og.jpg">
+  <meta name="twitter:card" content="summary">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&family=Lilita+One&family=Playfair:ital,opsz,wght@0,5..1200,400..600;1,5..1200,400&display=swap">
