@@ -59,7 +59,7 @@ img { max-width: 100%; height: auto; }
 main { padding: 40px 24px 64px; min-width: 0; }
 
 @media (min-width: 800px) {
-  html { background: linear-gradient(to right, var(--ink) 280px, var(--cream) 280px); }
+  body::before { content: ""; position: fixed; top: -100vh; bottom: -100vh; left: 0; width: 280px; z-index: -1; background: var(--ink); }
   .layout { display: flex; }
   .sidebar {
     position: sticky;
