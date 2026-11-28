@@ -26,9 +26,10 @@
   <link rel="apple-touch-icon" href="{{ root }}img/icon-180.jpg">
 </head>
 <body class="{{ page.body_class }}">
+<a class="skip" href="#content">Skip to content</a>
 <div class="layout">
   <aside class="sidebar">
-    <a class="badge" href="{{ root }}"><img src="{{ root }}img/icon-512.png" alt="Home"></a>
+    <a class="badge" href="{{ root }}" tabindex="-1" aria-hidden="true"><img src="{{ root }}img/icon-512.png" alt=""></a>
     <a class="name" href="{{ root }}"><span>Jeffrey</span><span>Parmet</span></a>
     <nav>
       <a href="{{ root }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
@@ -37,7 +38,7 @@
     </nav>
   </aside>
 
-  <main>
+  <main id="content">
 {{ content }}
   </main>
   <footer class="site-foot"><a href="https://github.com/jeffrey-parmet" target="_blank" rel="noopener">GitHub</a> • <a href="https://www.linkedin.com/in/jeffrey-parmet/" target="_blank" rel="noopener">Linkedin</a></footer>
