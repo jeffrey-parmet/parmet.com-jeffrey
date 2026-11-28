@@ -6,8 +6,8 @@ body_class: home
     <section class="intro">
       <div>
         <h1>Hi, I'm Jeffrey.</h1>
-        <p>I do things in movement/progressive tech, mostly engineering but also a suspicious amount of comms and analytics.</p>
-        <p>When I'm not at my computer I'm cooking, reading/writing, or doing yoga! I've also been known to play tennis.</p>
+        <p>I do things in movement/progressive tech, mostly engineering but also a suspicious amount of comms and analytics. Down for anything, really.</p>
+        <p>When I'm not at my computer I'm cooking, reading/writing, or doing yoga! I've also been known to play tennis. Thinking about bouldering, but how much of a tech bro can I be?</p>
       </div>
       <img class="portrait" src="{{ root }}img/me.jpeg" alt="Photo of me">
     </section>
@@ -18,7 +18,7 @@ body_class: home
         <a class="more" href="{{ root }}writing/">All writing →</a>
       </div>
       <ul class="posts">
-        {% for post in site.posts limit: 3 %}
+        {% for post in site.posts limit: 5 %}
         <li><a href="{{ root }}{{ post.url | remove_first: '/' }}"><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %-d, %Y' }}</time> <span>{{ post.title }}</span></a></li>
         {% endfor %}
       </ul>
